@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analyzer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Text Analyzer</h1>
+                <div class="theme-toggle">
+                    <button id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            <p class="subtitle">Analyze your text in real-time.</p>
+            <p class="description">Designer helps better representation of your needs and capabilities to solve problems drawn from the community. A global solution is needed to create a new solution for future work.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="input-header">
+                    <h2>Text Input</h2>
+                    <div class="toggle-container">
+                        <span>Include spaces</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="include-spaces" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="input-wrapper">
+                    <div class="limit-info">
+                        <span>Character limit: <span id="char-limit">1000</span></span>
+                        <button id="edit-limit" class="edit-btn" aria-label="Edit character limit">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
+                    <textarea 
+                        id="text-input" 
+                        placeholder="Start typing or paste your text here..." 
+                        maxlength="1000"
+                    ></textarea>
+                    <div class="char-count-warning" id="char-warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Character limit exceeded!</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Characters</h3>
+                        <div class="stat-value" id="char-count">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Words</h3>
+                        <div class="stat-value" id="word-count">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Sentences</h3>
+                        <div class="stat-value" id="sentence-count">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Reading Time (min)</h3>
+                        <div class="stat-value" id="reading-time">0</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="density-section">
+                <h2>Letter Density</h2>
+                <div class="density-grid" id="letter-density">
+                    <!-- Letter density will be populated by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+            <p>&copy; Fatihu AbdulGaniyy (Afhit). 2025, Text Analyzer. All rights reserved.</p>
+        </footer>
+    <script src="main.js"></script>
+</body>
+</html>
