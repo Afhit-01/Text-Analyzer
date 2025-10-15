@@ -66,14 +66,6 @@ h1 {
     color: var(--text-color);
     opacity: 0.8;
 }
-
-.description {
-    font-size: 1rem;
-    color: var(--text-color);
-    opacity: 0.7;
-    max-width: 800px;
-}
-
 .theme-toggle button {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -95,7 +87,7 @@ h1 {
 
 .theme-toggle button:focus {
     outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+    outline-offse: 2px;
 }
 
 .input-section {
